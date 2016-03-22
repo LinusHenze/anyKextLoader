@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		15B9DB091CA1A16F00AE3E83 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 15B9DB081CA1A16F00AE3E83 /* main.c */; };
+		15B9DB141CA1A1C800AE3E83 /* libinject.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B9DB121CA1A1C800AE3E83 /* libinject.m */; };
+		15B9DB181CA1CFD700AE3E83 /* exploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 15B9DB161CA1CFD700AE3E83 /* exploit.c */; };
+		15B9DB1B1CA1D1CF00AE3E83 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 15B9DB1A1CA1D1CF00AE3E83 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		15B9DB051CA1A16F00AE3E83 /* anyKextLoader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = anyKextLoader; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B9DB081CA1A16F00AE3E83 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		15B9DB111CA1A1C800AE3E83 /* libinject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libinject.h; sourceTree = "<group>"; };
+		15B9DB121CA1A1C800AE3E83 /* libinject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = libinject.m; sourceTree = "<group>"; };
+		15B9DB161CA1CFD700AE3E83 /* exploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exploit.c; sourceTree = "<group>"; };
+		15B9DB171CA1CFD700AE3E83 /* exploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exploit.h; sourceTree = "<group>"; };
+		15B9DB191CA1D15F00AE3E83 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		15B9DB1A1CA1D1CF00AE3E83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +50,8 @@
 		15B9DAFC1CA1A16F00AE3E83 = {
 			isa = PBXGroup;
 			children = (
+				15B9DB1A1CA1D1CF00AE3E83 /* README.md */,
+				15B9DB191CA1D15F00AE3E83 /* LICENSE.txt */,
 				15B9DB071CA1A16F00AE3E83 /* anyKextLoader */,
 				15B9DB061CA1A16F00AE3E83 /* Products */,
 			);
@@ -58,6 +69,10 @@
 			isa = PBXGroup;
 			children = (
 				15B9DB081CA1A16F00AE3E83 /* main.c */,
+				15B9DB161CA1CFD700AE3E83 /* exploit.c */,
+				15B9DB121CA1A1C800AE3E83 /* libinject.m */,
+				15B9DB171CA1CFD700AE3E83 /* exploit.h */,
+				15B9DB111CA1A1C800AE3E83 /* libinject.h */,
 			);
 			path = anyKextLoader;
 			sourceTree = "<group>";
@@ -118,6 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B9DB141CA1A1C800AE3E83 /* libinject.m in Sources */,
+				15B9DB181CA1CFD700AE3E83 /* exploit.c in Sources */,
+				15B9DB1B1CA1D1CF00AE3E83 /* README.md in Sources */,
 				15B9DB091CA1A16F00AE3E83 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +227,11 @@
 		15B9DB0D1CA1A16F00AE3E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/anyKextLoader",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +239,11 @@
 		15B9DB0E1CA1A16F00AE3E83 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/anyKextLoader",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
